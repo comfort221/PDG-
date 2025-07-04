@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>COM'FORT | Abdourahmane DIALLO</title>
+  <title>COM'FORT | Samba Thiam</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
     body {
@@ -33,32 +32,24 @@
       z-index: 1000;
     }
 
-    .small-banner {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 86, 112, 0.85);
-      color: white;
-      width: 100px;
-      height: 40px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      line-height: 40px;
-      text-align: center;
-      z-index: 900;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      user-select: none;
+    .banner-container {
+      width: 100%;
+      max-width: 100%;
+      height: 280px;
+      overflow: hidden;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      margin-top: 1.5rem;
     }
 
-    @media (max-width: 480px) {
-      .small-banner {
-        width: 80px;
-        height: 35px;
-        font-size: 0.9rem;
-        line-height: 35px;
-      }
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .avatar {
@@ -67,10 +58,11 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
-      margin: 160px auto 1rem;
+      margin: -70px auto 1rem;
       display: block;
       position: relative;
-      z-index: 1000;
+      z-index: 10;
+      transition: margin-top 0.3s ease;
     }
 
     h1, h4 {
@@ -131,26 +123,35 @@
       filter: invert(1);
     }
 
-    .swiper {
-      width: 100%;
-      padding: 20px 0;
+    .entreprises-section {
+      max-width: 95vw;
+      margin: 2rem auto;
+      text-align: center;
     }
 
-    .swiper-slide {
+    .entreprises-section h3 {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .entreprises-logos {
       display: flex;
       justify-content: center;
-      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
-    .swiper-slide img {
-      max-height: 80px;
-      max-width: 120px;
+    .entreprises-logos img {
+      max-height: 70px;
+      max-width: 130px;
       object-fit: contain;
       filter: brightness(0) invert(1);
       transition: filter 0.3s ease;
+      cursor: pointer;
     }
 
-    .swiper-slide img:hover {
+    .entreprises-logos img:hover {
       filter: brightness(1) invert(0);
     }
 
@@ -208,8 +209,9 @@
 
     @media (min-width: 600px) {
       .avatar {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
+        margin-top: -80px;
       }
 
       .description {
@@ -227,13 +229,29 @@
     }
   </style>
 </head>
+
 <body>
+
   <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
-  <div class="small-banner">Bannière</div>
+
+  <!-- Nouvelle bannière image -->
+  <div class="banner-container">
+    <img src="banniere.jpg" alt="Bannière Com'fort" class="banner-img" />
+  </div>
+
   <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="avatar" />
-  <h1>Abdourahmane DIALLO</h1>
-  <h4><span class="highlight-box"><i class="fas fa-user-tie"></i> Président Directeur Général</span><br> COM'FORT</h4>
-  <p class="description">Visionnaire et stratège, je suis Abdourahmane Oury DIALLO , Président Directeur Général de Com’fort. Mon objectif est clair : propulser les marques, entreprises et projets vers une visibilité impactante grâce à des solutions créatives et sur mesure. Com’fort, c’est bien plus qu’une entreprise — c’est une dynamique au service de votre image, où chaque détail compte, chaque action vise l’excellence. La créativité au service de votre visibilité.</p>
+
+  <h1>Samba THIAM</h1>
+  <h4>
+    <span class="highlight-box">
+      <i class="fas fa-user-tie"></i> Président Directeur Général
+    </span><br> COM'FORT
+  </h4>
+
+  <p class="description">
+    Visionnaire et stratège, je suis Samba Thiam, Président Directeur Général de Com’fort. Mon objectif est clair : propulser les marques, entreprises et projets vers une visibilité impactante grâce à des solutions créatives et sur mesure. Com’fort, c’est bien plus qu’une entreprise — c’est une dynamique au service de votre image, où chaque détail compte, chaque action vise l’excellence. La créativité au service de votre visibilité.
+  </p>
+
   <a href="contact.vcf" class="btn-contact" download>📇 Ajouter Contact</a>
 
   <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -264,53 +282,31 @@
 
   <div class="entreprises-section">
     <h3>Nos entreprises partenaires</h3>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="entreprise1.png" alt="Entreprise 1" title="Entreprise 1" /></div>
-        <div class="swiper-slide"><img src="entreprise2.png" alt="Entreprise 2" title="Entreprise 2" /></div>
-        <div class="swiper-slide"><img src="entreprise3.png" alt="Entreprise 3" title="Entreprise 3" /></div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+    <div class="entreprises-logos">
+      <img src="entreprise1.png" alt="Entreprise 1" title="Entreprise 1" />
+      <img src="entreprise2.png" alt="Entreprise 2" title="Entreprise 2" />
+      <img src="entreprise3.png" alt="Entreprise 3" title="Entreprise 3" />
+      <img src="entreprise4.png" alt="Entreprise 4" title="Entreprise 4" />
     </div>
   </div>
 
   <div class="social-icons text-center">
-    <a href="https://www.facebook.com/share/1Ag3odUt1t/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
-    <a href="https://www.instagram.com/com_fort_studio?igsh=MWlmeWFxNDR2ZHI1cA%3D%3D&utm_source=qr" target="_blank" class="instagram"><i class="fab fa-instagram fa-lg"></i></a>
-    <a href="https://www.tiktok.com/@com_fort.sn" target="_blank" class="tiktok"><i class="fab fa-tiktok fa-lg"></i></a>
-    <a href="https://wa.me/221783952347" target="_blank" class="whatsapp"><i class="fab fa-whatsapp fa-lg"></i></a>
+    <a href="https://www.facebook.com/share/1Ag3odUt1t/?mibextid=wwXIfr" target="_blank" class="facebook">
+      <i class="fab fa-facebook-f fa-lg"></i>
+    </a>
+    <a href="https://www.instagram.com/com_fort_studio?igsh=MWlmeWFxNDR2ZHI1cA%3D%3D&utm_source=qr" target="_blank" class="instagram">
+      <i class="fab fa-instagram fa-lg"></i>
+    </a>
+    <a href="https://www.tiktok.com/@com_fort.sn" target="_blank" class="tiktok">
+      <i class="fab fa-tiktok fa-lg"></i>
+    </a>
+    <a href="https://wa.me/221783952347" target="_blank" class="whatsapp">
+      <i class="fab fa-whatsapp fa-lg"></i>
+    </a>
   </div>
 
   <p class="slogan">La créativité au service de votre visibilité!</p>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 2,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        576: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        992: {
-          slidesPerView: 5,
-        }
-      }
-    });
-  </script>
 </body>
 </html>
