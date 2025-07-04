@@ -32,16 +32,45 @@
       z-index: 1000;
     }
 
+    /* Petite bannière responsive fixée en haut et centrée */
+    .small-banner {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 86, 112, 0.85);
+      color: white;
+      width: 100px;
+      height: 40px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 40px;
+      text-align: center;
+      z-index: 900; /* derrière l'avatar (avatar a 1000) */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      user-select: none;
+    }
+
+    @media (max-width: 480px) {
+      .small-banner {
+        width: 80px;
+        height: 35px;
+        font-size: 0.9rem;
+        line-height: 35px;
+      }
+    }
+
     .avatar {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
-      margin: 140px auto 1rem !important; /* décalé vers le bas pour bannière */
+      margin: 160px auto 1rem; /* décalé vers le bas pour bannière */
       display: block;
       position: relative;
-      z-index: 1000; /* au-dessus de la bannière */
+      z-index: 1000; /* devant la bannière */
       transition: margin-top 0.3s ease;
     }
 
@@ -188,38 +217,6 @@
       margin-bottom: 40px;
     }
 
-    /* Petite bannière fixe en haut */
-    .small-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgba(0, 86, 112, 0.85);
-      color: white;
-      padding: 6px 14px;
-      border-bottom-right-radius: 12px;
-      font-weight: 700;
-      font-size: 1rem;
-      z-index: 900;
-      max-width: 180px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      user-select: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .small-banner {
-        max-width: 140px;
-        font-size: 0.9rem;
-        padding: 5px 10px;
-      }
-      
-      .avatar {
-        margin-top: 110px !important;
-        width: 110px !important;
-        height: 110px !important;
-      }
-    }
-
     @media (min-width: 600px) {
       .avatar {
         width: 150px;
@@ -244,11 +241,11 @@
 
 <body>
 
-  <div class="small-banner">
-    Ma petite bannière fixe
-  </div>
-
   <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
+
+  <!-- Bannière fixe, centrée et responsive -->
+  <div class="small-banner">Bannière</div>
+
   <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="avatar" />
 
   <h1>Samba THIAM</h1>
