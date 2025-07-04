@@ -203,15 +203,61 @@
       .carousel-inner img {
         height: 480px;
       }
+      .top-banner {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 86, 112, 0.85); /* Couleur semi-transparente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  z-index: 1100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px); /* effet flou derrière */
+  height: 60px;
+}
+
+.banner-logo {
+  height: 45px;
+  width: auto;
+}
+
+.banner-avatar {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .top-banner {
+    height: 50px;
+    padding: 5px 10px;
+  }
+
+  .banner-logo {
+    height: 35px;
+  }
+
+  .banner-avatar {
+    height: 35px;
+    width: 35px;
+    border: 1.5px solid white;
+  }
+}
+
     }
   </style>
 </head>
 
 <body>
-
-  <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
-  <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="avatar" />
-
+  <!-- Bannière sticky en haut -->
+<header class="top-banner">
+  <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="banner-logo" />
+  <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="banner-avatar" />
+</header>
   <h1>Samba THIAM</h1>
   <h4>
     <span class="highlight-box">
