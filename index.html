@@ -38,8 +38,11 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
-      margin: 100px auto 1rem;
+      margin: 140px auto 1rem !important; /* décalé vers le bas pour bannière */
       display: block;
+      position: relative;
+      z-index: 1000; /* au-dessus de la bannière */
+      transition: margin-top 0.3s ease;
     }
 
     h1, h4 {
@@ -185,6 +188,38 @@
       margin-bottom: 40px;
     }
 
+    /* Petite bannière fixe en haut */
+    .small-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 86, 112, 0.85);
+      color: white;
+      padding: 6px 14px;
+      border-bottom-right-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      z-index: 900;
+      max-width: 180px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .small-banner {
+        max-width: 140px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+      }
+      
+      .avatar {
+        margin-top: 110px !important;
+        width: 110px !important;
+        height: 110px !important;
+      }
+    }
+
     @media (min-width: 600px) {
       .avatar {
         width: 150px;
@@ -208,6 +243,10 @@
 </head>
 
 <body>
+
+  <div class="small-banner">
+    Ma petite bannière fixe
+  </div>
 
   <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
   <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="avatar" />
