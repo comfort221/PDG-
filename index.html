@@ -32,33 +32,24 @@
       z-index: 1000;
     }
 
-    /* Petite bannière responsive fixée en haut et centrée */
-    .small-banner {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 86, 112, 0.85);
-      color: white;
-      width: 100px;
-      height: 40px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      line-height: 40px;
-      text-align: center;
-      z-index: 900; /* derrière l'avatar (avatar a 1000) */
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      user-select: none;
+    .banner-container {
+      width: 100%;
+      max-width: 100%;
+      height: 280px;
+      overflow: hidden;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      margin-top: 1.5rem;
     }
 
-    @media (max-width: 480px) {
-      .small-banner {
-        width: 80px;
-        height: 35px;
-        font-size: 0.9rem;
-        line-height: 35px;
-      }
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .avatar {
@@ -67,10 +58,10 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid white;
-      margin: 160px auto 1rem; /* décalé vers le bas pour bannière */
+      margin: -70px auto 1rem;
       display: block;
       position: relative;
-      z-index: 1000; /* devant la bannière */
+      z-index: 10;
       transition: margin-top 0.3s ease;
     }
 
@@ -132,7 +123,6 @@
       filter: invert(1);
     }
 
-    /* Section entreprises */
     .entreprises-section {
       max-width: 95vw;
       margin: 2rem auto;
@@ -219,8 +209,9 @@
 
     @media (min-width: 600px) {
       .avatar {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
+        margin-top: -80px;
       }
 
       .description {
@@ -243,8 +234,10 @@
 
   <img src="LOGO cOM4FORT.png" alt="Logo COMFORT" class="logo" />
 
-  <!-- Bannière fixe, centrée et responsive -->
-  <div class="small-banner">Bannière</div>
+  <!-- Nouvelle bannière image -->
+  <div class="banner-container">
+    <img src="banniere.jpg" alt="Bannière Com'fort" class="banner-img" />
+  </div>
 
   <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="avatar" />
 
@@ -278,7 +271,6 @@
     </button>
   </div>
 
-  <!-- Carte NFC avec lien WhatsApp -->
   <div class="text-center mt-5 mb-5">
     <a href="https://wa.me/221783952347" target="_blank">
       <img src="main-carte.png" alt="Carte NFC Samba Thiam" style="max-width: 320px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); cursor: pointer;">
@@ -288,7 +280,6 @@
     </p>
   </div>
 
-  <!-- Section entreprises -->
   <div class="entreprises-section">
     <h3>Nos entreprises partenaires</h3>
     <div class="entreprises-logos">
@@ -299,7 +290,6 @@
     </div>
   </div>
 
-  <!-- Réseaux sociaux -->
   <div class="social-icons text-center">
     <a href="https://www.facebook.com/share/1Ag3odUt1t/?mibextid=wwXIfr" target="_blank" class="facebook">
       <i class="fab fa-facebook-f fa-lg"></i>
