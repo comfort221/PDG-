@@ -130,6 +130,15 @@
       filter: invert(1);
     }
 
+    .leaflet-map-small {
+      height: 180px;
+      width: 300px;
+      max-width: 90vw;
+      margin: 1rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
     .entreprises-section {
       max-width: 95vw;
       margin: 2rem auto;
@@ -225,7 +234,7 @@
     <img src="banniere1.jpg" alt="Bannière Com'fort" class="banner-img" />
   </div>
   <img src="avatar.jpeg" alt="Avatar Samba Thiam" class="avatar" />
-  <h1> Abdourahmane DIALLO</h1>
+  <h1>Abdourahmane DIALLO</h1>
   <h4>
     <span class="highlight-box">
       <i class="fas fa-user-tie"></i> Directeur Général
@@ -236,12 +245,7 @@
   </p>
   <a href="contact.vcf" class="btn-contact" download>📇 Ajouter Contact</a>
 
-  <!-- Carte Leaflet interactive -->
-  <div class="text-center mt-4">
-    <h4>📍 Localisation</h4>
-    <div id="leaflet-map" style="height: 320px; max-width: 90vw; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"></div>
-  </div>
-
+  <!-- Carrousel -->
   <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner">
       <div class="carousel-item active"><img src="p3.jpg" alt="Produit 1" /></div>
@@ -257,6 +261,13 @@
     </button>
   </div>
 
+  <!-- Localisation en bas -->
+  <div class="text-center">
+    <h5 style="margin-top: 1.5rem;">📍 Localisation</h5>
+    <div id="leaflet-map" class="leaflet-map-small"></div>
+  </div>
+
+  <!-- Carte NFC -->
   <div class="text-center mt-5 mb-5">
     <a href="https://wa.me/221783952347" target="_blank">
       <img src="main-carte.png" alt="Carte NFC Samba Thiam" style="max-width: 320px; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); cursor: pointer;">
@@ -266,6 +277,7 @@
     </p>
   </div>
 
+  <!-- Partenaires -->
   <div class="entreprises-section">
     <h3>Nos entreprises partenaires</h3>
     <div class="entreprises-logos">
@@ -278,6 +290,7 @@
     </div>
   </div>
 
+  <!-- Réseaux sociaux -->
   <div class="social-icons text-center">
     <a href="https://www.facebook.com/people/Comfort-solution/61559220682273/" class="facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
     <a href="https://www.instagram.com/comfortsolution1/" class="instagram"><i class="fab fa-instagram fa-lg"></i></a>
