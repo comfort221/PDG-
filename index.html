@@ -199,6 +199,25 @@
      
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
+    .btn-contact {
+  background: white;
+  color: #005670;
+  font-weight: bold;
+  margin: 1rem auto;
+  display: block;
+  max-width: 200px;
+  border-radius: 6px;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.btn-contact:hover {
+  transform: scale(1.05);
+}
+
    }
   </style>
 </head>
@@ -306,17 +325,18 @@
   </div>
 
   <!-- Partenaires -->
-  <div class="entreprises-section">
-    <h3>Nos entreprises partenaires</h3>
-    <div class="entreprises-logos">
-      <a href="https://www.ourydiallo.com/" target="_blank">
-        <img src="entreprise1.png" alt="Ourydiallo" />
-      </a>
-      <a href="https://www.xn--mdlectronique-chb.store/" target="_blank">
-        <img src="entreprise333.png" alt="MD Electronique" />
-      </a>
-    </div>
+<div class="text-center mt-5">
+  <h3 style="margin-bottom: 1rem;">Nos entreprises partenaires</h3>
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <a href="https://www.ourydiallo.com/" target="_blank" class="btn-contact">
+      Oury Diallo
+    </a>
+    <a href="https://www.xn--mdlectronique-chb.store/" target="_blank" class="btn-contact">
+      MD Electronique
+    </a>
   </div>
+</div>
+
 
   <!-- Réseaux sociaux -->
   <div class="social-icons">
