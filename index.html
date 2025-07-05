@@ -196,7 +196,26 @@
       font-weight: bold;
       text-align: center;
       margin: 12px 0 40px;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+     
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    .location-highlight {
+  background: linear-gradient(90deg, #005670, #f15a24);
+  color: white;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.location-highlight:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
     }
   </style>
 </head>
